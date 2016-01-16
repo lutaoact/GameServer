@@ -1,0 +1,20 @@
+<h1>用户 <%= user_id %>的卡牌列表</h1><hr>
+
+<table border=1>
+    <tr>
+    <% _.each(_.keys(OpeConst.UserCardKeyMap), function(key) { %>
+        <th><%= OpeConst.UserCardKeyMap[key] %></th>
+    <% }); %>
+    </tr>
+
+    <% _.each(user_cards, function(userCard) { %>
+    <tr>
+        <% _.each(_.keys(OpeConst.UserCardKeyMap), function(key) { %>
+        <td><%= userCard[key] %></td>
+        <% }); %>
+    </tr>
+    <% }); %>
+
+</table>
+<% include user_footer %>
+

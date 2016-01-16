@@ -1,0 +1,6 @@
+.DS_Store
+log/
+/test.*
+/npm-debug.log
+/nohup.out
+node_modules

@@ -1,0 +1,245 @@
+{
+   "gacha_package" : [
+      {
+         "probability" : "105",
+         "gacha_package_id" : "1010101",
+         "card_id" : "1"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "1010201",
+         "card_id" : "2"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "1010202",
+         "card_id" : "131"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2010101",
+         "card_id" : "131"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2020101",
+         "card_id" : "131"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2030101",
+         "card_id" : "131"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2010201",
+         "card_id" : "1"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2010202",
+         "card_id" : "2"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2020201",
+         "card_id" : "143"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2020202",
+         "card_id" : "143"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2030201",
+         "card_id" : "143"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2030202",
+         "card_id" : "143"
+      },
+      {
+         "probability" : "105",
+         "gacha_package_id" : "2030202",
+         "card_id" : "147"
+      }
+   ],
+   "gacha" : [
+      {
+         "draw_limit" : "0",
+         "num1" : "1",
+         "closed_at" : "2022-04-30 09:00",
+         "price1" : "100",
+         "position" : "1",
+         "price2" : "1000",
+         "is_count_down" : "",
+         "payment_type" : "1",
+         "group_step" : "1",
+         "display_order" : "1",
+         "display_vip" : "0",
+         "banner_id3" : "",
+         "name" : "好朋友",
+         "gacha_id" : "101",
+         "banner_id2" : "",
+         "opened_at" : "2012-03-30 09:00",
+         "banner_id1" : "1",
+         "gacha_probability_id1" : "10101",
+         "group_id" : "100",
+         "comment" : "",
+         "gacha_probability_id2" : "10102",
+         "banner_id4" : "",
+         "num2" : "10"
+      },
+      {
+         "draw_limit" : "3",
+         "num1" : "1",
+         "closed_at" : "2022-04-30 09:00",
+         "price1" : "5",
+         "position" : "2",
+         "price2" : "45",
+         "is_count_down" : "",
+         "payment_type" : "2",
+         "group_step" : "1",
+         "display_order" : "1",
+         "display_vip" : "0",
+         "banner_id3" : "",
+         "name" : "来来来1",
+         "gacha_id" : "201",
+         "banner_id2" : "",
+         "opened_at" : "2012-03-30 09:00",
+         "banner_id1" : "2",
+         "gacha_probability_id1" : "20101",
+         "group_id" : "200",
+         "comment" : "",
+         "gacha_probability_id2" : "20102",
+         "banner_id4" : "",
+         "num2" : "10"
+      },
+      {
+         "draw_limit" : "3",
+         "num1" : "1",
+         "closed_at" : "2022-04-30 09:00",
+         "price1" : "10",
+         "position" : "2",
+         "price2" : "900",
+         "is_count_down" : "",
+         "payment_type" : "2",
+         "group_step" : "2",
+         "display_order" : "2",
+         "display_vip" : "0",
+         "banner_id3" : "",
+         "name" : "来来来2",
+         "gacha_id" : "202",
+         "banner_id2" : "",
+         "opened_at" : "2012-03-30 09:00",
+         "banner_id1" : "2",
+         "gacha_probability_id1" : "20201",
+         "group_id" : "200",
+         "comment" : "",
+         "gacha_probability_id2" : "20202",
+         "banner_id4" : "",
+         "num2" : "10"
+      },
+      {
+         "draw_limit" : "0",
+         "num1" : "1",
+         "closed_at" : "2022-04-30 09:00",
+         "price1" : "20",
+         "position" : "2",
+         "price2" : "1800",
+         "is_count_down" : "",
+         "payment_type" : "2",
+         "group_step" : "3",
+         "display_order" : "2",
+         "display_vip" : "0",
+         "banner_id3" : "",
+         "name" : "来来来3",
+         "gacha_id" : "203",
+         "banner_id2" : "",
+         "opened_at" : "2012-03-30 09:00",
+         "banner_id1" : "2",
+         "gacha_probability_id1" : "20301",
+         "group_id" : "200",
+         "comment" : "",
+         "gacha_probability_id2" : "20302",
+         "banner_id4" : "",
+         "num2" : "10"
+      }
+   ],
+   "gacha_probability" : [
+      {
+         "gacha_probability_id" : "10101",
+         "num" : "1",
+         "name" : "normal",
+         "package_id" : "1010101"
+      },
+      {
+         "gacha_probability_id" : "10102",
+         "num" : "8",
+         "name" : "normal",
+         "package_id" : "1010201"
+      },
+      {
+         "gacha_probability_id" : "10102",
+         "num" : "2",
+         "name" : "featured",
+         "package_id" : "1010202"
+      },
+      {
+         "gacha_probability_id" : "20101",
+         "num" : "1",
+         "name" : "normal",
+         "package_id" : "2010101"
+      },
+      {
+         "gacha_probability_id" : "20201",
+         "num" : "1",
+         "name" : "normal",
+         "package_id" : "2020101"
+      },
+      {
+         "gacha_probability_id" : "20301",
+         "num" : "1",
+         "name" : "normal",
+         "package_id" : "2030101"
+      },
+      {
+         "gacha_probability_id" : "20102",
+         "num" : "8",
+         "name" : "normal",
+         "package_id" : "2010201"
+      },
+      {
+         "gacha_probability_id" : "20102",
+         "num" : "2",
+         "name" : "featured",
+         "package_id" : "2010202"
+      },
+      {
+         "gacha_probability_id" : "20202",
+         "num" : "8",
+         "name" : "normal",
+         "package_id" : "2020201"
+      },
+      {
+         "gacha_probability_id" : "20202",
+         "num" : "2",
+         "name" : "featured",
+         "package_id" : "2020202"
+      },
+      {
+         "gacha_probability_id" : "20302",
+         "num" : "8",
+         "name" : "normal",
+         "package_id" : "2030201"
+      },
+      {
+         "gacha_probability_id" : "20302",
+         "num" : "2",
+         "name" : "featured",
+         "package_id" : "2030202"
+      }
+   ]
+}

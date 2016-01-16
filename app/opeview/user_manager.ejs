@@ -1,0 +1,64 @@
+<h1>用户<%= user_id %>的管理界面</h1>
+<% var id_button_size = 25 %>
+
+<h3>编辑用户信息</h3>
+<form  method='get' action='/show_user'>
+    <input type="hidden" name='user_id' size="<%= id_button_size %>" value="<%= user_id %>"/>
+    <input type="submit" value="提交" />
+</form>
+<hr>
+
+<h3>获取用户所有卡牌</h3>
+<form method='get' action='/get_all_user_cards' >
+    <input type="hidden" name='user_id' size="<%= id_button_size %>" value="<%= user_id %>"/>
+    <input type="submit" value="提交"/>
+</form>
+<hr>
+
+<h3>添加卡牌</h3>
+<form class="ajax_form" method='post' action='/add_user_card' >
+    <input type="hidden" name='user_id' size="<%= id_button_size %>" value="<%= user_id %>"/>
+    card_id : <input type="input" name='card_id' size="<%= id_button_size %>"/><br>
+    <input type="submit" value="提交" />
+</form>
+<hr>
+
+<h3>给用户加钱</h3>
+<form class="ajax_form" method='post' action='/add_money' >
+    <input type="hidden" name='user_id' size="<%= id_button_size %>" value="<%= user_id %>"/>
+    money : <input type="input" name='money' /><br>
+    <input type="submit" value="提交" />
+</form>
+<hr>
+
+<h3>动态数据一览</h3>
+<form method='post' action='/get_dynamic_data'>
+    <input type="hidden" name='user_id' size="<%= id_button_size %>" value="<%= user_id %>"/>
+    <input type="submit" value="动态数据一览" />
+</form>
+<hr>
+
+<script src="/js/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+    $(".ajax_form").submit(function() {
+        $.ajax({
+            type : $(this).attr('method'),
+            url  : $(this).attr('action'),
+            data : $(this).serialize(),
+            dataType : 'json',
+        }).done(function(data) {
+            alert(data.err_code ? data.err_msg : 'OK: \n' + JSON.stringify(data.result, null, 2));
+        }).fail(function() {
+            alert('error');
+        });
+        return false;
+    });
+});
+
+function newWindow(path) {
+    window.open(path)
+}
+</script>
+
+

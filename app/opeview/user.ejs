@@ -1,0 +1,13 @@
+<h1>用户 <%= user['_id'] %>的信息</h1><hr>
+
+<form method='post' action='/set_user_info'>
+    <% _.each(_.keys(OpeConst.UserKeyMap), function(key) { %>
+            <%= OpeConst.UserKeyMap[key] %> :
+            <input type="input" name='<%= key %>' size="25" value="<%= user[key] %>"/>
+            </br>
+            <hr>
+    <% }); %>
+            <input type="submit" value="提交" />
+</form>
+<% var user_id = user['_id'] %>
+<% include user_footer %>

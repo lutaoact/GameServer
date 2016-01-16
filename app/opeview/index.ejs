@@ -1,0 +1,76 @@
+<h1>Ope Tools</h1>
+<% var id_button_size = 25 %>
+<hr>
+<table>
+    <tr>
+        <td>
+        <form class="ajax_form" method='post' action='/create_user' >
+            <input type="submit" value="一键生成新用户" />
+        </form>
+        </td>
+        <td>
+        <form method='get' action='/upload_index'>
+            <input type="submit" value="上传静态数据文件" />
+        </form>
+        </td>
+        <td>
+        <form method='post' action='/get_static_data'>
+            <input type="submit" value="静态数据一览" />
+        </form>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<h3>用户管理</h3>
+<form  method='get' action='/user_manager'>
+    user_id : <input type="input" name='user_id' size="<%= id_button_size %>"/><br>
+    <input type="submit" value="提交" />
+</form>
+
+<hr>
+
+
+<!--
+<h1><%= good %></h1>
+<% for (var i = 0; i < 100; i++) { %>
+    <h1><%= i %></h1>
+<% } %>
+
+<% _.each(userIds, function(userId) { %>
+    <h1><%= userId %></h1>
+<% }); %>
+
+<button onclick="newWindow('/welcome');">user_card 一览</button><br />
+<button onclick="newWindow('/welcome?hello=1'); return false;">1</button><br />
+-->
+<h3>卡牌强化</h3>
+<form class="ajax_form" method='post' action='/card_level_up'>
+    user_card_id : <input type="input" name="user_card_id" size="<%= id_button_size %>"/><br>
+    level : <input type="input" name="level" /><br>
+    <input type="submit" value="提交" />
+</form>
+<hr>
+
+<script src="/js/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+    $(".ajax_form").submit(function() {
+        $.ajax({
+            type : $(this).attr('method'),
+            url  : $(this).attr('action'),
+            data : $(this).serialize(),
+            dataType : 'json',
+        }).done(function(data) {
+            alert(data.err_code ? data.err_msg : 'OK: \n' + JSON.stringify(data.result, null, 2));
+        }).fail(function() {
+            alert('error');
+        });
+        return false;
+    });
+});
+
+function newWindow(path) {
+    window.open(path)
+}
+</script>

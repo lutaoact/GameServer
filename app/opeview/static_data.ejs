@@ -1,0 +1,29 @@
+<h1>静态数据表 -- <%= name %></h1><hr>
+<% _.each(_.keys(MasterDataConf), function(key) { %>
+    <a href="/get_static_data?name=<%= key %>"><%= key %></a>
+<% }); %>
+<hr>
+<% if(!_.isEmpty(results)) {%>
+<!--    <% _.each(results, function(result) { %>
+        <%= result %>
+        <br />
+        <% }); %>-->
+ <table border=1>
+        <tr>
+            <% _.each(_.keys(results[0]['_doc']).reverse(), function(key) { %>
+            <th><%= key %></th>
+            <% }); %>
+        </tr>
+       <% _.each(results, function(result) { %>
+        <tr>
+            <% _.each(_.keys(result['_doc']).reverse(), function(key) { %>
+            <td><%= result['_doc'][key] %></td>
+            <% }); %>
+        </tr>
+        <% }); %>
+    </table>
+
+<% } %>
+<hr>
+<button onclick="window.location='http://'+window.location.host;">返回首页</button><br />
+
